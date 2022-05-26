@@ -10,7 +10,7 @@ public class Div {
         List<Integer> list5 = new ArrayList<Integer>();
         int n = list.size();
         for (int i=0; i < n; i++)
-            if (i%5==0 && i<150) { list5.add(list.get(i));};
+            if (list.get(i) %5==0 && list.get(i)<150) { list5.add(list.get(i));};
         System.out.println(list5);
     }
 
