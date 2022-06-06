@@ -6,10 +6,10 @@ public class Car {
     private String carColor = null;
     private Integer releaseYear = 0;
     private Integer horsePowers = 0;
-    private Boolean secondHand;
+    private Boolean secondHand = new Boolean("true");
 
 
-    public Car(String carName, String carColor, Integer releaseYear, Integer horsePowers, Boolean secondHand) {
+    public Car(String carName) {
         this.carName = carName;
         this.carColor = carColor;
         this.releaseYear = releaseYear;
@@ -40,6 +40,9 @@ public class Car {
     public Car() {
     }
 
+    public Car(String audi, String black, String aFalse) {
+    }
+
     @Override
     public String toString() {
         return "Car{" +
@@ -49,6 +52,51 @@ public class Car {
                 ", horsePowers=" + horsePowers +
                 ", secondHand=" + secondHand +
                 '}';
+    }
+
+    public void setSecondHand(Boolean secondHand) {
+        this.secondHand = secondHand;
+    }
+
+    public String getCarName() {
+        return carName;
+    }
+
+    public void setCarName(String carName) {
+        this.carName = carName;
+    }
+
+    public String getCarColor() {
+        return carColor;
+    }
+
+    public void setCarColor(String carColor) {
+        this.carColor = carColor;
+    }
+
+    public Integer getReleaseYear() {
+        return releaseYear;
+    }
+
+    public void setReleaseYear(Integer releaseYear) {
+        this.releaseYear = releaseYear;
+    }
+
+    public Integer getHorsePowers() {
+        return horsePowers;
+    }
+
+    public void setHorsePowers(Integer horsePowers) {
+        this.horsePowers = horsePowers;
+    }
+
+    public Boolean getSecondHand() {
+        if ( secondHand != true) {
+            System.out.println("false");
+        }
+        return secondHand;
+
+
     }
 }
 
