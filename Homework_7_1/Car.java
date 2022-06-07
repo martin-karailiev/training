@@ -1,46 +1,72 @@
 package Homework_7_1;
 
+
 public class Car {
 
-    private String carName = null;
-    private String carColor = null;
-    private Integer releaseYear = 0;
-    private Integer horsePowers = 0;
-    private Boolean secondHand = new Boolean("true");
+    private String str;
+    private String carName = isNullEmpty(str);
+    private String carColor = isNullEmpty(str);
+    private Integer y = 0;
+    private Integer releaseYear = isNullEmpty1(y);
+
+    private Integer horsePower = isNullEmpty1(y);
+    private boolean sec;
+    private boolean secondHand = sec;
+    private static String isNullEmpty(String str) {
+
+        if (str == null || str.isEmpty()) {
+            return "N/A";
+        } else {
+            return str;
+        }}
 
 
-    public Car(String carName) {
+
+       private static Integer isNullEmpty1(Integer y){
+
+           if (y.equals(0)) {
+               return -1;
+           } else {
+                return y;
+            }}
+
+    private static Boolean isSecondHand (Boolean sec) {
+
+if (sec != true) {
+    return sec = false;
+}
+else {return true;
+            }}
+
+    public Car(String carName, String carColor, Integer releaseYear, Integer horsePower, boolean secondHand) {
         this.carName = carName;
         this.carColor = carColor;
         this.releaseYear = releaseYear;
-        this.horsePowers = horsePowers;
+        this.horsePower = horsePower;
         this.secondHand = secondHand;
     }
 
-    public Car(String carName, String carColor, Boolean secondHand) {
+    public Car(String carName, String carColor, boolean secondHand) {
         this.carName = carName;
         this.carColor = carColor;
         this.secondHand = secondHand;
     }
 
-    public Car(String carName, String carColor, Integer releaseYear, Integer horsePowers) {
+    public Car(String carName, String carColor, Integer releaseYear, Integer horsePower) {
         this.carName = carName;
         this.carColor = carColor;
         this.releaseYear = releaseYear;
-        this.horsePowers = horsePowers;
+        this.horsePower = horsePower;
     }
 
-    public Car(String carName, Integer releaseYear, Integer horsePowers, Boolean secondHand) {
+    public Car(String carName, Integer releaseYear, Integer horsePower, boolean secondHand) {
         this.carName = carName;
         this.releaseYear = releaseYear;
-        this.horsePowers = horsePowers;
+        this.horsePower = horsePower;
         this.secondHand = secondHand;
     }
 
     public Car() {
-    }
-
-    public Car(String audi, String black, String aFalse) {
     }
 
     @Override
@@ -49,56 +75,9 @@ public class Car {
                 "carName='" + carName + '\'' +
                 ", carColor='" + carColor + '\'' +
                 ", releaseYear=" + releaseYear +
-                ", horsePowers=" + horsePowers +
+                ", horsePower=" + horsePower +
                 ", secondHand=" + secondHand +
                 '}';
     }
-
-    public void setSecondHand(Boolean secondHand) {
-        this.secondHand = secondHand;
-    }
-
-    public String getCarName() {
-        return carName;
-    }
-
-    public void setCarName(String carName) {
-        this.carName = carName;
-    }
-
-    public String getCarColor() {
-        return carColor;
-    }
-
-    public void setCarColor(String carColor) {
-        this.carColor = carColor;
-    }
-
-    public Integer getReleaseYear() {
-        return releaseYear;
-    }
-
-    public void setReleaseYear(Integer releaseYear) {
-        this.releaseYear = releaseYear;
-    }
-
-    public Integer getHorsePowers() {
-        return horsePowers;
-    }
-
-    public void setHorsePowers(Integer horsePowers) {
-        this.horsePowers = horsePowers;
-    }
-
-    public Boolean getSecondHand() {
-        if ( secondHand != true) {
-            System.out.println("false");
-        }
-        return secondHand;
-
-
-    }
 }
-
-
 
